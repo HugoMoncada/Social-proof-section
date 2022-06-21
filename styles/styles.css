@@ -1,0 +1,394 @@
+:root{
+    /* Primary */
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+
+    /* Neutral */
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+/* ======= GENERAL STYLES ======= */
+
+html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container{
+    width: 100%;
+    padding: 3% 3%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+main{
+    padding: 10% 4%;
+}
+
+.desktop{
+    display: none;
+}
+
+
+/* ========== */
+
+
+/* ======= SVG STYLES ======= */
+.top-svg, .bottom-svg{
+    position: absolute;
+    max-width: 100%;
+}
+
+.top-svg{
+    top: 0;
+}
+
+.bottom-svg{
+    bottom: 0;
+    right: 0;
+}
+/* ========== */
+
+
+/* ======= INTRODUCTION STYLES ======= */
+.introduction {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h1{
+    color: var(--Very-Dark-Magenta);
+    font-size: 40px;
+    line-height: 32px;
+}
+
+.introduction p{
+    color: var(--Dark-Grayish-Magenta);
+    font-weight: 500;
+    font-size: 16px;
+}
+/* ========== */
+
+
+/* ======= REVIEW STYLES ======= */
+.reviews{
+    margin-bottom: 35px;
+}
+
+.reviews__card{
+    text-align: center;
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 10px;
+    padding: 14px 0;
+    margin-bottom: 18px;
+}
+
+.reviews__stars{
+    margin-bottom: 5px;
+}
+
+.reviews__card p{
+    margin: 0;
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+}
+
+/* ========== */
+
+
+/* ======= TESTIMONIALS STYLES ======= */
+.testimonials__card{
+    background-color: var(--Very-Dark-Magenta);
+    padding: 24px;
+    border-radius: 10px;
+    margin-bottom: 17px;
+}
+
+.testimonials__head{
+    display: flex;
+}
+
+.testimonials__head img{
+    border-radius: 50%;
+    height: 38px;
+    margin-right: 17px;
+}
+
+.testimonials__title{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+.testimonials__card h4, p{
+    margin: 0;
+}
+
+.testimonials__title h4{
+    color: white;
+}
+
+.testimonials__title p{
+    color: var(--Soft-Pink);
+}
+
+.testimonials__body{
+    color: white;
+}
+/* ========== */
+
+
+/* ======= MEDIA QUERYS ======= */
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+    .container{
+        width: 100%;
+    }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+    .container{
+        width: 540px;
+    }
+
+    .bottom-svg{
+        display: none;
+    }
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+    .container{
+        width: 720px;
+    }
+
+    h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+    
+    /* ======= GENERAL STYLES ======= */
+    .container{
+        width: 960px;
+    }
+
+
+    body{
+        height: 100vh;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+    }
+
+
+    main{
+        padding: 0;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: [col] 1fr  [col] 1fr ;
+    }
+    /* ========== */
+    
+
+    /* ======= INTRODUCTION STYLES ======= */
+    .introduction{
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    h1{
+        font-size: 55px;
+        line-height: 55px;
+        margin-top: 0;
+        margin-bottom: 27px;
+    }
+
+    .introduction p{
+        font-size: 20px;
+        margin-right: 70px;
+    }
+    /* ========== */
+
+
+    /* ======= REVIEWS STYLES ======= */
+    .reviews{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reviews__card{
+        width: 67%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .first-review{
+        align-self: flex-start;
+    }
+
+    .second-review{
+        align-self: center;
+    }
+
+    .third-review{
+        align-self: flex-end;
+    }
+
+    .reviews__card p{
+        margin: 0;
+    }
+
+    .reviews__stars{
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+
+    /* ========== */
+
+
+    /* ======= TESTIMONIALS STYLES ======= */
+    .testimonials{
+        display: flex;
+        justify-content: space-between;
+        grid-column: col / span 2;
+        height: 365px;
+    }
+
+    .testimonials__card{
+        width: 23%;
+        padding: 35px;
+        font-size: 17px;
+    }
+
+    .first-testimonial{
+        align-self: flex-start;
+    }
+
+    .second-testimonial{
+        align-self: center;
+    }
+
+    .third-testimonial{
+        align-self: flex-end;
+    }
+    /* ========== */
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+    .container{
+        width: 1140px;
+    }
+    
+
+    /* ======= INTRODUCTION STYLES ======= */
+    .introduction{
+        text-align: left;
+    }
+
+    h1{
+        font-size: 67px;
+        line-height: 55px;
+        margin-top: 0;
+        margin-bottom: 27px;
+        margin-right: 20px;
+    }
+
+    .introduction p{
+        font-size: 22px;
+        margin-right: 70px;
+    }
+    /* ========== */
+
+
+    /* ======= REVIEWS STYLES ======= */
+    .reviews{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reviews__card{
+        display: flex;
+        width: 67%;
+        justify-content: center;
+        align-content: center;
+        padding: 22px;
+    }
+ 
+
+    .first-review{
+        align-self: flex-start;
+    }
+
+    .second-review{
+        align-self: center;
+    }
+
+    .third-review{
+        align-self: flex-end;
+    }
+    /* ========== */
+
+
+    /* ======= TESTIMONIALS STYLES ======= */
+    .testimonials{
+        display: flex;
+        justify-content: space-between;
+        grid-column: col / span 2;
+        height: 270px;
+    }
+
+    .testimonials__card{
+        width: 25%;
+        padding: 40px;
+        font-size: 17px;
+    }
+
+    .first-testimonial{
+        align-self: flex-start;
+    }
+
+    .second-testimonial{
+        align-self: center;
+    }
+
+    .third-testimonial{
+        align-self: flex-end;
+    }
+    /* ========== */
+
+  
+ } 
+
+ @media only screen and (min-width: 1400px) {
+    .container{
+        width: 1320px;
+    }
+ } 
+
+
+/* ========== */
